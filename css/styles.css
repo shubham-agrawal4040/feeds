@@ -1,0 +1,83 @@
+body {
+	font-size: 14px;
+    background: #eee;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.highlight {
+    color: #71b4e2;
+}
+
+article {
+	margin-bottom: 10px;
+	padding: 0 15px 15px;
+	border: 1px solid #ccc; 
+	background: #fff;
+}
+
+article h3 {
+    color: #201589;
+    font-size: 1.3em;    
+    margin: 15px 0;
+}
+
+article p {
+    margin: 10px 0;
+}
+
+.post-row {
+    margin: 0 -5px;
+}
+
+.post-row span{
+    margin: 0 5px;
+    padding: 0 10px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    background: #71b4e2;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.action-row {
+    margin: 5px -10px 10px;
+    height: 30px;
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+}
+
+.action-row .action{
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.action-row span {
+    vertical-align: 4px;
+}
+
+.load-more-btn {
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #71b4e2;
+    color: #fff;
+}
+
+.loader {
+    height: 50px;
+    margin: 20px 0;
+    background: url(../images/ajax-loader.gif) no-repeat center;
+    background-size: 200px auto;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feeds</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="css/material-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body ng-app="mainApp">
+    <main class="container" ng-controller="homeController">
+        <h1>Posts</h1>
+        <section>
+            <article ng-repeat="post in mainPosts | limitTo:numOfRecordsVisible">
+                <h3>{{post._Title}}</h3>
+                <p ng-bind-html="post._Body"></p>
+
+                <div class="action-row">
+                    <div class="action" ng-click="toggleFavorite(post)">
+                        <i class="mi mi-thumb-up mi-24" ng-class="{'highlight': post._IsFav}"></i>
+                        <span>Favorite</span>
+                    </div>
+                    <div class="action">
+                        <i class="mi mi-question-answer mi-24"></i>
+                        <span>Answer</span>
+                    </div>
+                    <div class="action">
+                        <i class="mi mi-comment mi-24"></i>
+                        <span>Comment</span>
+                    </div>
+                </div>
+
+                <div class="post-row">
+                    <span>{{post._FavoriteCount || 0}} favorites</span>
+                    <span>{{post._AnswerCount || 0}} answers</span>
+                    <span>{{post._CommentCount || 0}} comments</span>
+                    <span>{{post._ViewCount || 0}} views</span>
+                </div>
+            </article>
+            <div class="load-more-btn" ng-if="loadMore" ng-click="loadMorePosts()">
+                <div>Load More</div>
+            </div>
+            <div class="loader" ng-if="isLoading">
+            </div>
+        </section>
+    </main>
+
+    <!--Scripts-->
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+</body>
+
+</html>
